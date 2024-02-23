@@ -20,7 +20,12 @@ document.body.appendChild(elemDiv);
                 text: 'Percentage change'
             },
             tickPixelInterval: 20,
-            allowDecimals: true
+            allowDecimals: true,
+            plotLines: [{
+                color: '#FF0000',
+                width: 1,
+                value: 0,
+                zIndex:2}]
         },
     
         legend: {
