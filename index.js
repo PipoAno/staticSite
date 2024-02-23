@@ -3,15 +3,15 @@ import {chartMaker} from './chartMaker.js';
 
 for(const[dataKey, dataVal] of Object.entries(data)){
 let series = [];
-let seriesExpect = [];
+let seriesCompounded = [];
 for (const [key, value] of Object.entries(dataVal)) {
     let ser = {"name":value.similarity, "data":value.vectorIOPair.o.dataPoints};
     series.push(ser);
-    let serExpect = {"name":value.similarity+' (Expected)', "data":expectedValueMapper(value.vectorIOPair.o.dataPoints)};
-    seriesExpect.push(serExpect);
+    let serComp = {"name":value.similarity+' (Compounded)', "data":expectedValueMapper(value.vectorIOPair.o.dataPoints)};
+    seriesCompounded.push(serComp);
 }
 chartMaker('container'+dataKey, dataKey, series);
-chartMaker('container'+dataKey+'expected', dataKey+' (Expected)', seriesExpect);
+chartMaker('container'+dataKey+'compounded', dataKey+' (Compounded)', seriesCompounded);
 }
 
 function expectedValueMapper(datapoints){
