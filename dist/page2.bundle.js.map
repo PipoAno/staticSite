@@ -1,0 +1,1 @@
+{"version":3,"file":"page2.bundle.js","mappings":"AAAAA,MAAM","sources":["webpack://staticsite/./src/page2.js"],"sourcesContent":["alert('I was loaded');"],"names":["alert"],"sourceRoot":""}
