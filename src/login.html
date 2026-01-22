@@ -12,8 +12,14 @@
 <title>PipoHub</title>
 </head>
 <body>
-<h1 class="big">Welcome</h1>
+<h1 class="big">Please login</h1>
 <div class="login-form">
-    <h2 data-message>Hey everybody!</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
 </div>
 </body>

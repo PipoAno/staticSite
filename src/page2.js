@@ -1,1 +1,2 @@
-alert('I was loaded');
+localStorage.removeItem('jwtToken');
+alert('Token deleted');

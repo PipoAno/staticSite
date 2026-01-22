@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    login: './src/app.js',
-    page2: './src/page2.js'
+    login: './src/login.js',
+    page2: './src/page2.js',
+    index: './src/index.js'
   },
   devtool: "source-map",
   output: {
@@ -32,6 +33,11 @@ module.exports = {
       filename: 'page2.html',
       template: './src/page2.html',
       chunks: ['page2']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: './src/login.html',
+      chunks: ['login']
     })
   ],
   devServer: {
